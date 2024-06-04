@@ -46,7 +46,7 @@
       </button>
 
       <div class="dropdown" 
-        style="{{ session()->get('locale') === 'ar' ? 'position: fixed; left: 20%;z-index:11;'  :  'position: fixed; right: 20%;z-index:11;' }}" >
+        style="{{ session()->get('locale') === 'ar' ? 'position: fixed; left: 30%;z-index:11;'  :  'position: fixed; right: 30%;z-index:11;' }}" >
         <a style="color: rgb(255, 255, 255)"  href="#" role="button" id="languageDropdown"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <i class="fas fa-earth" style="font-size:35px" ></i>

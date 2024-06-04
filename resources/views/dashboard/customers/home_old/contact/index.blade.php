@@ -28,12 +28,8 @@
             @method('POST')
 
             <div class="mb-3">
-                <label >Arabic Address OF Company</label>
+                <label >Address OF Company</label>
                 <input type="text" class="form-control" value="{{$slide['address']}}" name="address" >
-            </div>
-            <div class="mb-3">
-                <label >English Address OF Company</label>
-                <input type="text" class="form-control" value="{{$slide['address_en']}}" name="address_en" >
             </div>
             <div class="mb-3">
                 <label >Phone</label>

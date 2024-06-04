@@ -23,38 +23,22 @@
                 }
                 // print_r($slide);die;
             ?>
-            
         <!-- .page-inner -->
         <form action="{{route('dashboard.customers.update')}}" method="POST" enctype="multipart/form-data">
             @csrf
             @method('POST')
 
             <div class="mb-3">
-                <label >Arabic name of company</label>
-                <div class="mb-1">
-                    <input type="text" class="form-control" value="{{$slide['name']}}" name="name" >
-                </div>
-                <label>English name of company</label>
-                <div class="mb-1">
-                    <input type="text" class="form-control" value="{{$slide['name_en']}}" name="name_en" >
-                </div>
+                <label >Name OF Company</label>
+                <input type="text" class="form-control" value="{{$slide['name']}}" name="name" >
             </div>
 
             <div class="mb-3">
-                <label >Arabic header</label>
-                <div class="mb-1">
-                    <input type="text" class="form-control" value="{{$slide['header']}}" name="header" >
-                </div>
-                <label >English header</label>
-                <div class="mb-1">
-                    <input type="text" class="form-control" value="{{$slide['header_en']}}" name="header_en" >
-                </div>
+                <label >Header</label>
+                <input type="text" class="form-control" value="{{$slide['header']}}" name="header" >
             </div>
-            <div class="mb-1">
+            <div class="mb-3">
                 <input type="text" class="form-control" value="{{$slide['wordheader']}}" name="wordheader" >
-            </div>
-            <div class="mb-1">
-                <input type="text" class="form-control" value="{{$slide['wordheader_en']}}" name="wordheader_en" >
             </div>
             
             <div class="mb-3 form-inline">

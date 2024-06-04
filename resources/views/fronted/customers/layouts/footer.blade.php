@@ -40,7 +40,14 @@
           <div class="row g-4 align-items-center">
             <div class="col-md-6 col-lg-3">
               <div class="title-footer">
-                <h1 class="mt-0"><strong>{{ $item['name'] }}</strong></h1>
+                <h1 class="mt-0"><strong>
+                  @if(app()->getLocale() == 'ar')
+                  {{$item['name']}}
+                  @else
+                  {{$item['name_en']}}
+                  @endif
+  
+                </strong></h1>
               </div>
               
               <div class="logo-footer mt-5 mb-5">
@@ -65,7 +72,13 @@
                 @endfor
                 {{$about_words}}                    
                 @endif --}}
+                @if(app()->getLocale() == 'ar')
                 {{$item['wordheader']}}
+                @else
+                {{$item['wordheader_en']}}
+                @endif
+
+
               </p>
             </div>
   
@@ -89,7 +102,13 @@
                                 }
                         ?>
                       <li class="mt-3 mb-3">
-                        <a href="#">  {{$slide['title']}} </a><span><i class="fa-solid fa-angle-right me-2"></i></span>
+                        <a href="#">
+                            {{-- @if(app()->getLocale() == 'ar') --}}
+                            {{$slide['title']}}
+                            {{-- @else --}}
+                            {{-- {{$slide['title_en']}} --}}
+                            {{-- @endif --}}
+                          </a><span><i class="fa-solid fa-angle-right me-2"></i></span>
                       </li>
                     @endforeach                        
                 @endif
@@ -104,7 +123,13 @@
               <div class="titles WOW fadeIn">
                 <ul class="text-capitalize text-black-50 mt-0 mb-0">
                   <li class="mt-3 mb-3">
-                    <a href="#" class="location"> {{ $item2['address'] }}<a>
+                    <a href="#" class="location">
+                      @if(app()->getLocale() == 'ar')
+                      {{$item2['address']}}
+                      @else
+                      {{$item2['address_en']}}
+                      @endif
+                      <a>
                     <span><i class="fa fa-map-marker-alt me-2"></i></span>
                   </li>
                   <li class="mt-3 mb-3">
@@ -112,12 +137,10 @@
                     ><span><i class="fa fa-phone me-2"></i></span>
                   </li>
                   <li class="mt-3 mb-3">
-                    <a href="{{$item2['face']}}" class="face">  @if ($item2['face'] == "#") {{'فيس بوك'}} @endif </a
-                    ><span><i class="fa-brands fa-facebook me-2"></i></span>
+                    <a href="{{$item2['face']}}" class="face"> <span><i style="font-size: 25px" class="fa-brands fa-facebook me-2"></i></span>  </a>
                   </li>
                   <li class="mt-3 mb-3">
-                    <a href=" {{ $item2['insta'] }}" class="insta">  @if ($item2['insta'] == "#") {{'إنستجرام'}} @endif </a
-                    ><span><i class="fa-brands fa-instagram me-2"></i></span>
+                    <a href=" {{ $item2['insta'] }}" class="insta"> <span><i style="font-size: 25px" class="fa-brands fa-instagram me-2"></i></span>  </a>
                   </li>
                 </ul>
               </div>

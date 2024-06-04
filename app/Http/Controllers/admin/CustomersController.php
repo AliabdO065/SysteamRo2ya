@@ -29,6 +29,313 @@ class CustomersController extends Controller
     
 
 
+// //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//     // // main
+//     // intro
+//     public function intro()
+//     {
+//         $content = $this->getContent(1);
+//         return view('dashboard.customers.home.intro.index',compact('content'));
+//     }
+//     public function updateintro(Request $request)
+//     {
+//             $request->validate([
+//                 'name' => 'required','header' => 'required','wordheader' => 'required',
+//             ]);
+//             $newcontent =  'name=#='.$request->name.'#x#'.'header=#='.$request->header.'#x#'.'wordheader=#='.$request->wordheader;
+//                 if ($request->file('img')) {
+//                     $file = $request->file('img');
+//                     $filename = Str::uuid() . $file->getClientOriginalName();
+//                     $file->move(public_path('images/customers'), $filename);
+//                     $path = 'images\customers\\' . $filename;
+//                     $newcontent.='#x#'.'img=#='.$path;
+
+//                     $filePath = public_path($request->image);
+//                     if (File::exists($filePath)) {
+//                         File::delete($filePath);
+//                     }
+//                 }else{
+//                     $newcontent.='#x#'.'img=#='.$request->image;
+//                 }
+
+                
+//                 if ($request->file('imgl')) {
+//                     $file = $request->file('imgl');
+//                     $filename = Str::uuid() . $file->getClientOriginalName();
+//                     $file->move(public_path('images/customers'), $filename);
+//                     $path = 'images\customers\\' . $filename;
+//                     $newcontent.='#x#'.'imgl=#='.$path;
+
+//                     $filePath = public_path($request->imagel);
+//                     if (File::exists($filePath)) {
+//                         File::delete($filePath);
+//                     }
+//                 }else{
+//                     $newcontent.='#x#'.'imgl=#='.$request->imagel;
+//                 }
+
+                
+//             Customers::find(1)->update(['content' => $newcontent] );
+//             return redirect()->route('dashboard.customers');
+//     }
+
+
+//     //about 
+//     public function about()
+//     {
+//         $content = $this->getContent(2);
+//         return view('dashboard.customers.home.about.index',compact('content'));
+//     }
+
+//     public function updateabout(Request $request)
+//     {
+//             $request->validate([
+//                 'header1' => 'required','wordheader1' => 'required',
+//                 'header2' => 'required','wordheader2' => 'required',
+//                 'header3' => 'required','wordheader3' => 'required',
+//             ]);
+//             $newcontent = 'header1=#='.$request->header1.'#x#'.'wordheader1=#='.$request->wordheader1.'#x#'
+//                         .'header2=#='.$request->header2.'#x#'.'wordheader2=#='.$request->wordheader2.'#x#'
+//                         .'header3=#='.$request->header3.'#x#'.'wordheader3=#='.$request->wordheader3;
+                
+//                 if ($request->file('img1')) {
+//                     $file = $request->file('img1');
+//                     $filename = Str::uuid() . $file->getClientOriginalName();
+//                     $file->move(public_path('images/customers'), $filename);
+//                     $path = 'images\customers\\' . $filename;
+//                     $newcontent.='#x#'.'img1=#='.$path;
+
+//                     $filePath = public_path($request->image1);
+//                     if (File::exists($filePath)) {
+//                         File::delete($filePath);
+//                     }
+//                 }else{
+//                     $newcontent.='#x#'.'img1=#='.$request->image1;
+//                 }
+//                 if ($request->file('img2')) {
+//                     $file = $request->file('img2');
+//                     $filename = Str::uuid() . $file->getClientOriginalName();
+//                     $file->move(public_path('images/customers'), $filename);
+//                     $path = 'images\customers\\' . $filename;
+//                     $newcontent.='#x#'.'img2=#='.$path;
+
+//                     $filePath = public_path($request->image2); 
+//                     if (File::exists($filePath)) {
+//                         File::delete($filePath);
+//                     }
+//                 }else{
+//                     $newcontent.='#x#'.'img2=#='.$request->image2;
+//                 }
+//                 if ($request->file('img3')) {
+//                     $file = $request->file('img3');
+//                     $filename = Str::uuid() . $file->getClientOriginalName();
+//                     $file->move(public_path('images/customers'), $filename);
+//                     $path = 'images\customers\\' . $filename;
+//                     $newcontent.='#x#'.'img3=#='.$path;
+        
+//                     $filePath = public_path($request->image3); 
+//                     if (File::exists($filePath)) {
+//                         File::delete($filePath);
+//                     }
+//                 }else{
+//                     $newcontent.='#x#'.'img3=#='.$request->image3;
+//                 }
+//                 if ($request->file('img4')) {
+//                     $file = $request->file('img4');
+//                     $filename = Str::uuid() . $file->getClientOriginalName();
+//                     $file->move(public_path('images/customers'), $filename);
+//                     $path = 'images\customers\\' . $filename;
+//                     $newcontent.='#x#'.'img4=#='.$path;
+        
+//                     $filePath = public_path($request->image4); 
+//                     if (File::exists($filePath)) {
+//                         File::delete($filePath);
+//                     }
+//                 }else{
+//                     $newcontent.='#x#'.'img4=#='.$request->image4;
+//                 }
+//                 if ($request->file('img5')) {
+//                     $file = $request->file('img5');
+//                     $filename = Str::uuid() . $file->getClientOriginalName();
+//                     $file->move(public_path('images/customers'), $filename);
+//                     $path = 'images\customers\\' . $filename;
+//                     $newcontent.='#x#'.'img5=#='.$path;
+        
+//                     $filePath = public_path($request->image5); 
+//                     if (File::exists($filePath)) {
+//                         File::delete($filePath);
+//                     }
+//                 }else{
+//                     $newcontent.='#x#'.'img5=#='.$request->image5;
+//                 }
+                
+
+//             Customers::find(2)->update(['content' => $newcontent] );
+//             return redirect()->route('dashboard.customers.about');
+//     }
+
+
+//     //service
+//     public function service()
+//     {
+//         $content = $this->getContent(3);
+//         return view('dashboard.customers.home.services.index',compact('content'));
+//     }
+
+//     public function updateservice(Request $request)
+//     {
+//             $request->validate([
+//                 'header' => 'required','wordheader' => 'required',
+//             ]);
+//             $newcontent = 'header=#='.$request->header.'#x#'.'wordheader=#='.$request->wordheader;
+                
+//                 if ($request->file('img1')) {
+//                     $file = $request->file('img1');
+//                     $filename = Str::uuid() . $file->getClientOriginalName();
+//                     $file->move(public_path('images/customers'), $filename);
+//                     $path = 'images\customers\\' . $filename;
+//                     $newcontent.='#x#'.'img1=#='.$path;
+
+//                     $filePath = public_path($request->image1);
+//                     if (File::exists($filePath)) {
+//                         File::delete($filePath);
+//                     }
+//                 }else{
+//                     $newcontent.='#x#'.'img1=#='.$request->image1;
+//                 }
+//                 if ($request->file('img2')) {
+//                     $file = $request->file('img2');
+//                     $filename = Str::uuid() . $file->getClientOriginalName();
+//                     $file->move(public_path('images/customers'), $filename);
+//                     $path = 'images\customers\\' . $filename;
+//                     $newcontent.='#x#'.'img2=#='.$path;
+
+//                     $filePath = public_path($request->image2); 
+//                     if (File::exists($filePath)) {
+//                         File::delete($filePath);
+//                     }
+//                 }else{
+//                     $newcontent.='#x#'.'img2=#='.$request->image2;
+//                 }
+//                 if ($request->file('img3')) {
+//                     $file = $request->file('img3');
+//                     $filename = Str::uuid() . $file->getClientOriginalName();
+//                     $file->move(public_path('images/customers'), $filename);
+//                     $path = 'images\customers\\' . $filename;
+//                     $newcontent.='#x#'.'img3=#='.$path;
+        
+//                     $filePath = public_path($request->image3); 
+//                     if (File::exists($filePath)) {
+//                         File::delete($filePath);
+//                     }
+//                 }else{
+//                     $newcontent.='#x#'.'img3=#='.$request->image3;
+//                 }
+//                 if ($request->file('img4')) {
+//                     $file = $request->file('img4');
+//                     $filename = Str::uuid() . $file->getClientOriginalName();
+//                     $file->move(public_path('images/customers'), $filename);
+//                     $path = 'images\customers\\' . $filename;
+//                     $newcontent.='#x#'.'img4=#='.$path;
+        
+//                     $filePath = public_path($request->image4); 
+//                     if (File::exists($filePath)) {
+//                         File::delete($filePath);
+//                     }
+//                 }else{
+//                     $newcontent.='#x#'.'img4=#='.$request->image4;
+//                 }
+//                 if ($request->file('img5')) {
+//                     $file = $request->file('img5');
+//                     $filename = Str::uuid() . $file->getClientOriginalName();
+//                     $file->move(public_path('images/customers'), $filename);
+//                     $path = 'images\customers\\' . $filename;
+//                     $newcontent.='#x#'.'img5=#='.$path;
+        
+//                     $filePath = public_path($request->image5); 
+//                     if (File::exists($filePath)) {
+//                         File::delete($filePath);
+//                     }
+//                 }else{
+//                     $newcontent.='#x#'.'img5=#='.$request->image5;
+//                 }
+                
+
+//             Customers::find(3)->update(['content' => $newcontent] );
+//             return redirect()->route('dashboard.customers.service');
+//     }
+
+    
+//     //excellence 
+//     public function excellence()
+//     {
+//         $content = $this->getContent(4);
+//         return view('dashboard.customers.home.excellence.index',compact('content'));
+//     }
+
+//     public function updatexcellence(Request $request)
+//     {
+//             $request->validate([
+//                 'header1' => 'required','wordheader1' => 'required',
+//                 'header2' => 'required','wordheader2' => 'required',
+//             ]);
+//             $newcontent = 'header1=#='.$request->header1.'#x#'.'wordheader1=#='.$request->wordheader1
+//                         .'#x#'.'header2=#='.$request->header2.'#x#'.'wordheader2=#='.$request->wordheader2;
+                
+//                 if ($request->file('img1')) {
+//                     $file = $request->file('img1');
+//                     $filename = Str::uuid() . $file->getClientOriginalName();
+//                     $file->move(public_path('images/customers'), $filename);
+//                     $path = 'images\customers\\' . $filename;
+//                     $newcontent.='#x#'.'img1=#='.$path;
+
+//                     $filePath = public_path($request->image1);
+//                     if (File::exists($filePath)) {
+//                         File::delete($filePath);
+//                     }
+//                 }else{
+//                     $newcontent.='#x#'.'img1=#='.$request->image1;
+//                 }
+//                 if ($request->file('img2')) {
+//                     $file = $request->file('img2');
+//                     $filename = Str::uuid() . $file->getClientOriginalName();
+//                     $file->move(public_path('images/customers'), $filename);
+//                     $path = 'images\customers\\' . $filename;
+//                     $newcontent.='#x#'.'img2=#='.$path;
+
+//                     $filePath = public_path($request->image2); 
+//                     if (File::exists($filePath)) {
+//                         File::delete($filePath);
+//                     }
+//                 }else{
+//                     $newcontent.='#x#'.'img2=#='.$request->image2;
+//                 }
+
+//             Customers::find(4)->update(['content' => $newcontent] );
+//             return redirect()->route('dashboard.customers.excellence');
+//     }
+
+//     //excellence 
+//     public function contact()
+//     {
+//         $content = $this->getContent(5);
+//         return view('dashboard.customers.home.contact.index',compact('content'));
+//     }
+
+//     public function updatecontact(Request $request)
+//     {
+//             $request->validate([
+//                 'address' => 'required','phone' => 'required',
+//                 'face' => 'required','insta' => 'required',
+//             ]);
+//             $newcontent = 'address=#='.$request->address.'#x#'.'phone=#='.$request->phone
+//                         .'#x#'.'face=#='.$request->face.'#x#'.'insta=#='.$request->insta;
+                
+            
+//             Customers::find(5)->update(['content' => $newcontent] );
+//             return redirect()->route('dashboard.customers.contact');
+//     }
+
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     // // main
     // intro
@@ -41,8 +348,11 @@ class CustomersController extends Controller
     {
             $request->validate([
                 'name' => 'required','header' => 'required','wordheader' => 'required',
+                'name_en' => 'required','header_en' => 'required','wordheader_en' => 'required',
             ]);
-            $newcontent =  'name=#='.$request->name.'#x#'.'header=#='.$request->header.'#x#'.'wordheader=#='.$request->wordheader;
+            $newcontent =  'name=#='.$request->name.'#x#'.'header=#='.$request->header.'#x#'.'wordheader=#='.$request->wordheader.
+            '#x#'.'name_en=#='.$request->name_en.'#x#'.'header_en=#='.$request->header_en .'#x#'.'wordheader_en=#='.$request->wordheader_en;
+                
                 if ($request->file('img')) {
                     $file = $request->file('img');
                     $filename = Str::uuid() . $file->getClientOriginalName();
@@ -93,10 +403,16 @@ class CustomersController extends Controller
                 'header1' => 'required','wordheader1' => 'required',
                 'header2' => 'required','wordheader2' => 'required',
                 'header3' => 'required','wordheader3' => 'required',
+                'header1_en' => 'required','wordheader1_en' => 'required',
+                'header2_en' => 'required','wordheader2_en' => 'required',
+                'header3_en' => 'required','wordheader3_en' => 'required',
             ]);
             $newcontent = 'header1=#='.$request->header1.'#x#'.'wordheader1=#='.$request->wordheader1.'#x#'
                         .'header2=#='.$request->header2.'#x#'.'wordheader2=#='.$request->wordheader2.'#x#'
-                        .'header3=#='.$request->header3.'#x#'.'wordheader3=#='.$request->wordheader3;
+                        .'header3=#='.$request->header3.'#x#'.'wordheader3=#='.$request->wordheader3.'#x#'
+                        .'header1_en=#='.$request->header1_en.'#x#'.'wordheader1_en=#='.$request->wordheader1_en.'#x#'
+                        .'header2_en=#='.$request->header2_en.'#x#'.'wordheader2_en=#='.$request->wordheader2_en.'#x#'
+                        .'header3_en=#='.$request->header3_en.'#x#'.'wordheader3_en=#='.$request->wordheader3_en;
                 
                 if ($request->file('img1')) {
                     $file = $request->file('img1');
@@ -186,8 +502,10 @@ class CustomersController extends Controller
     {
             $request->validate([
                 'header' => 'required','wordheader' => 'required',
+                'header_en' => 'required','wordheader_en' => 'required',
             ]);
-            $newcontent = 'header=#='.$request->header.'#x#'.'wordheader=#='.$request->wordheader;
+            $newcontent = 'header=#='.$request->header.'#x#'.'wordheader=#='.$request->wordheader.'#x#'.
+            'header_en=#='.$request->header_en.'#x#'.'wordheader_en=#='.$request->wordheader_en;
                 
                 if ($request->file('img1')) {
                     $file = $request->file('img1');
@@ -278,9 +596,14 @@ class CustomersController extends Controller
             $request->validate([
                 'header1' => 'required','wordheader1' => 'required',
                 'header2' => 'required','wordheader2' => 'required',
+                'header1_en' => 'required','wordheader1_en' => 'required',
+                'header2_en' => 'required','wordheader2_en' => 'required',
             ]);
             $newcontent = 'header1=#='.$request->header1.'#x#'.'wordheader1=#='.$request->wordheader1
-                        .'#x#'.'header2=#='.$request->header2.'#x#'.'wordheader2=#='.$request->wordheader2;
+                        .'#x#'.'header2=#='.$request->header2.'#x#'.'wordheader2=#='.$request->wordheader2
+                        .'#x#'.'header1_en=#='.$request->header1_en.'#x#'.'wordheader1_en=#='.$request->wordheader1_en
+                        .'#x#'.'header2_en=#='.$request->header2_en.'#x#'.'wordheader2_en=#='.$request->wordheader2_en
+                        ;
                 
                 if ($request->file('img1')) {
                     $file = $request->file('img1');
@@ -325,11 +648,15 @@ class CustomersController extends Controller
     public function updatecontact(Request $request)
     {
             $request->validate([
-                'address' => 'required','phone' => 'required',
-                'face' => 'required','insta' => 'required',
+                'address' => 'required',
+                'address_en' => 'required',
+                'phone' => 'required',
+                'face' => 'required',
+                'insta' => 'required',
             ]);
-            $newcontent = 'address=#='.$request->address.'#x#'.'phone=#='.$request->phone
-                        .'#x#'.'face=#='.$request->face.'#x#'.'insta=#='.$request->insta;
+            $newcontent = 'address=#='.$request->address.'#x#'.
+            'address_en=#='.$request->address_en.'#x#'.'phone=#='.$request->phone
+            .'#x#'.'face=#='.$request->face.'#x#'.'insta=#='.$request->insta;
                 
             
             Customers::find(5)->update(['content' => $newcontent] );

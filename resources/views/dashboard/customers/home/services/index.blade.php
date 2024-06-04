@@ -30,9 +30,14 @@
 
 
             <div class="mb-3">
-                <label >Header</label>
+                <label >خدماتنا</label>
                 <input type="text" class="form-control" value="{{$slide['header']}}" name="header" >
                 <input type="text" class="form-control" value="{{$slide['wordheader']}}" name="wordheader" >
+            </div>
+            <div class="mb-3">
+                <label >Our Service</label>
+                <input type="text" class="form-control" value="{{$slide['header_en']}}" name="header_en" >
+                <input type="text" class="form-control" value="{{$slide['wordheader_en']}}" name="wordheader_en" >
             </div>
 
             <div class="mb-3 form-inline">

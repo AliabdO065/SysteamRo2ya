@@ -33,7 +33,7 @@ let myBtn = document.getElementById("mybtn");
 let myScroll = document.getElementById("scroll");
 let isShow = true;
 function toggleBtn () {
-    if(isShow ){
+    if(isShow){
         myContacts.style.display = "none";
         myBtn.style.transform = "rotate(0deg)";
         myBtn.style.transition = "0.5s";

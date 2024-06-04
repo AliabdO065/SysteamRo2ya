@@ -29,14 +29,9 @@
             @method('POST')
 
             <div class="mb-3">
-                <label >Arabic majors</label>
+                <label >Header</label>
                 <input type="text" class="form-control" value="{{$slide['header1']}}" name="header1" >
                 <input type="text" class="form-control" value="{{$slide['wordheader1']}}" name="wordheader1" >
-            </div>
-            <div class="mb-3">
-                <label >English majors</label>
-                <input type="text" class="form-control" value="{{$slide['header1_en']}}" name="header1_en" >
-                <input type="text" class="form-control" value="{{$slide['wordheader1_en']}}" name="wordheader1_en" >
             </div>
             
             <div class="mb-3 form-inline">
@@ -48,14 +43,9 @@
 
 
             <div class="mb-3">
-                <label >Arabic majors</label>
+                <label >Header</label>
                 <input type="text" class="form-control" value="{{$slide['header2']}}" name="header2" >
                 <input type="text" class="form-control" value="{{$slide['wordheader2']}}" name="wordheader2" >
-            </div>
-            <div class="mb-3">
-                <label >English majors</label>
-                <input type="text" class="form-control" value="{{$slide['header2_en']}}" name="header2_en" >
-                <input type="text" class="form-control" value="{{$slide['wordheader2_en']}}" name="wordheader2_en" >
             </div>
             
 

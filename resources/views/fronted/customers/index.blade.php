@@ -222,7 +222,7 @@
 
 <!--social media-->
 
-<div class="social-media fixed-bottom " id="scroll">
+{{-- <div class="social-media fixed-bottom " id="scroll">
   <div class="container" >
     <div class="social-arrow" >
       <button id="mybtn" onclick="toggleBtn()"><i class="fa-solid fa-angle-up"></i></button>
@@ -242,18 +242,18 @@
             <a href="#" class="" ><i class="fa-solid fa-phone" ></i></a>
           </div>
       </div>
-</div>
-</div>
+  </div>
+</div> --}}
 
 <!--social media-->
 
 @endsection
 
 @section('js')
+<script src="{{asset('fronted/customers/js/main.js')}}"></script>
 <script src="{{asset('fronted/customers/js/all.min.js')}}"></script>
 <script src="{{asset('fronted/customers/js/bootstrap.bundle.js')}}"></script>
 <script src="{{asset('fronted/customers/js/wow.min.js')}}"></script>
-<script src="{{asset('fronted/customers/js/main.js')}}"></script>
 
 <script>new WOW().init();</script>
 @endsection
